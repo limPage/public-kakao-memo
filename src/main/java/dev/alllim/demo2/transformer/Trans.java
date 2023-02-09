@@ -22,7 +22,6 @@ public class Trans {
 		return default_msg_param;
 	}
 
-
 	public static String token(String rtn, JsonParser parser) {
         JsonElement element = parser.parse(rtn);       
         return element.getAsJsonObject().get("access_token").getAsString();
