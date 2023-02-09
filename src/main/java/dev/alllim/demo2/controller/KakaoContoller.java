@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 
 @RestController(value = "/")
@@ -22,8 +23,9 @@ public class KakaoContoller {
         ModelAndView modelAndView =new ModelAndView("kakao/index");
         modelAndView.addObject("user",user);
         LocalTime date = LocalTime.now();
-        String formatDate= date.format(DateTimeFormatter.ofPattern("a HH:mm"));
+        String formatDate= date.format(DateTimeFormatter.ofPattern("a HH:mm", Locale.KOREAN));
         modelAndView.addObject("formatDate",formatDate);
+        System.out.println(formatDate);
         return modelAndView;
     }
     @Autowired
