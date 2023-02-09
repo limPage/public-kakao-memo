@@ -1,0 +1,251 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+html {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    height: 100%;
+}
+
+body {
+    background-color: #3567b8;
+    height: 100%;
+
+    margin: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+body > ul {
+    border-radius: 0.2rem;
+    max-width: 20rem;
+    background-color: white;
+    margin: unset;
+    padding: unset;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
+}
+
+body > ul > li {
+    list-style: none;
+}
+
+body > ul > .title {
+    background-color: #553830;
+    color: #fae100;
+    border-top-left-radius: 0.17rem;
+    border-top-right-radius: 0.17rem;
+    box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.7);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+body > ul > .title > h1 {
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem 0.5rem;
+    border-radius: 999rem;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 0.125rem 0.4375rem rgba(0, 0, 0, 0.9);
+}
+
+body > ul > .user {
+    display: flex;
+    background-color: rgba(65, 162, 255, 0.40);
+
+}
+
+body > ul > .user > a {
+    color: black;
+    text-decoration: none;
+    background-color: #fae100;
+    border-radius: 0.3rem;
+    padding: 0.1rem 1rem;
+    margin: 0.2rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+
+}
+
+
+body > ul > .user > .spring {
+    flex: 1;
+}
+
+
+body > ul > .main {
+
+    min-height: 2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    border-bottom-right-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.3);
+}
+
+body > ul > .main > label {
+    width: 100%;
+    min-height: 5rem;
+    overflow: hidden;
+    border-bottom-left-radius: 0.2rem;
+
+}
+
+body > ul > .main > input {
+    border: none;
+    cursor: pointer;
+    border-bottom-right-radius: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    font-family: inherit;
+
+}
+
+body > ul > .main > input:focus {
+    outline: 0;
+}
+
+
+body > ul > .main > label > textarea {
+    font-size: 1.5rem;
+    overflow-y: auto;
+    resize: none;
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    max-height: 20rem;
+    border: none;
+    border-bottom-right-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    font-family: inherit;
+
+}
+
+body > ul > .main > label > textarea:focus {
+    outline: 0;
+}
+
+body > ul > .main > label > textarea::placeholder {
+    font-family: inherit;
+
+}
+
+
+body > ul > .report-container {
+    height: 30rem;
+    background-color: rgba(65, 162, 255, 0.40);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+body > ul > .report-container::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: rgba(0, 0, 0, 0.3);
+
+    border-radius: 0.625rem;
+}
+
+body > ul > .report-container::-webkit-scrollbar-track {
+    background: none;
+}
+
+
+body > ul > .report-container::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+
+body > ul > .report-container > .admin {
+    padding: 1rem 0.1rem 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+body > ul > .report-container > .admin > .profile-row > .profile {
+    border-radius: 999rem;
+    background-color: seagreen;
+    color: yellow;
+    padding: 0.7rem 0;
+}
+
+body > ul > .report-container > .admin > div > .message {
+    padding: 0.5rem 0.2rem;
+    background-color: white;
+    display: inline-block;
+    border-radius: 0.3rem;
+    font-size: 0.7rem;
+    max-width: 10rem;
+    overflow-x: hidden;
+    white-space: normal;
+    box-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.5);
+
+}
+
+body > ul > .main > label > textarea::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: rgba(0, 0, 0, 0.3);
+
+    border-radius: 0.1rem;
+}
+
+body > ul > .main > label > textarea::-webkit-scrollbar-track {
+    background: none;
+}
+
+
+body > ul > .main > label > textarea::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+
+body > ul > .report-container > .admin > .message-container > .name,
+body > ul > .report-container > .report > .message-container > .name {
+    display: block;
+    background-color: unset;
+
+}
+
+body > ul > .report-container > .admin > .time-row,
+body > ul > .report-container > .report > .time-row {
+
+    display: flex;
+    align-items: flex-end;
+    height: 4rem;
+    font-size: 0.5rem;
+}
+
+body > ul > .report-container > .report {
+    padding: 1rem 0.1rem 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+
+body > ul > .report-container > .report > div > .message {
+    padding: 0.5rem 0.2rem;
+    background-color: yellow;
+    display: inline-block;
+    border-radius: 0.3rem;
+    font-size: 0.7rem;
+    max-width: 10rem;
+    overflow-x: hidden;
+    white-space: normal;
+    position: relative;
+    box-shadow: 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+
+

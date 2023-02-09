@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>메모 - 로그인</title>
+
+  <script th:if="${user==1}">
+      // window.opener.location.reload();
+    // window.opener.document.getElementById('loginButton').dataset.result ='success';
+    //이 창을 열게한 부모창 이 오프너
+  </script>
+  <script>
+      // window.opener?.document.getElementById('loginContainer')?.classList.remove('visible');
+    window.close();
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>

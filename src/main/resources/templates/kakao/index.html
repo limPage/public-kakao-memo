@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>: : 카카오 메모 : :</title>
+    <link rel="stylesheet" href="/resources/stylesheets/index.css">
+    <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5fb22dcdb6b877f23d9d37e5b1bcf268"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script type="text/javascript" defer src="/resources/scripts/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+<ul>
+    <li class="title">
+        <h1>KAKAO Memo </h1>
+    </li>
+    <li class="user">
+        <span class="spring"></span>
+        <a class="button" href="#" id="loginButton" th:if="${user==0}">
+            Login</a>
+        <a class="button" th:href=" @{/logout}" id="logoutButton" th:if="${user==1}">Logout</a>
+    </li>
+
+    <li class="report-container" rel="reportContainer" id="reportContainer">
+
+        <div class="admin" th:if="${user==1}">
+            <div class="profile-row">
+                <span class="profile">memo</span>
+            </div>
+
+            <div class="message-container">
+                <span class="name">admin</span>
+                <span class="message">연결 되었습니다. 오늘도 좋은 하루!</span>
+
+            </div>
+
+            <div class="time-row">
+                <!--                        <span class="time" th:text="${#dates.format(#dates.createNow(),'HH:mm')}">오후 6:00</span>-->
+                <span class="time" th:text="${formatDate}">오후 6:00</span>
+            </div>
+        </div>
+
+        <div class="admin" th:if="${user==0}">
+            <div class="profile-row">
+                <span class="profile">memo</span>
+            </div>
+
+            <div class="message-container">
+                <span class="name">admin</span>
+                <span class="message">로그인 해주세요.</span>
+
+            </div>
+
+            <div class="time-row">
+                <!--                        <span class="time" th:text="${#dates.format(#dates.createNow(),'HH:mm')}">오후 6:00</span>-->
+                <span class="time" th:text="${formatDate}">오후 6:00</span>
+            </div>
+        </div>
+
+
+    </li>
+    <li class="main">
+
+        <label>
+            <textarea placeholder="" id="text" onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+        </label>
+
+        <input type="button" id="send" value="전송">
+    </li>
+
+
+    <input hidden id="login" th:value="${user}">
+</ul>
+
+
+</body>
+</html>
