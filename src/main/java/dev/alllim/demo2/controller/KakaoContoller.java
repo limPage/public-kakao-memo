@@ -40,19 +40,9 @@ public class KakaoContoller {
         return kakaoService.loginCallback(code);
     }
 
-    @RequestMapping("/profile")
-    public String getProfile() {
-        return kakaoService.getProfile();
-    }
-
     @RequestMapping("/authorize")
     public RedirectView goKakaoOAuth(@RequestParam("scope") String scope) {
         return kakaoService.goKakaoOAuth(scope);
-    }
-
-    @RequestMapping("/friends")
-    public String getFriends() {
-        return kakaoService.getFriends();
     }
 
     @RequestMapping("/message")

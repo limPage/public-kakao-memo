@@ -27,7 +27,7 @@ public class KakaoService {
     @Value("2cfb634876b2550cd738d54b5998a512")
     private String REST_API_KEY;
 
-    @Value("http://localhost:8080/login-callback")
+    @Value("https://memo.alllim.dev/login-callback")
     private String REDIRECT_URI;
 
     @Value("https://kauth.kakao.com/oauth/authorize")
@@ -36,8 +36,8 @@ public class KakaoService {
     @Value("https://kauth.kakao.com/oauth/token")
     public String TOKEN_URI;
 
-    @Value("oRCTUgAjyUAKk6xrf4Q05vtk3KMVkeFb")
-    private String CLIENT_SECRET;
+//    @Value("oRCTUgAjyUAKk6xrf4Q05vtk3KMVkeFb")
+//    private String CLIENT_SECRET;
 
     @Value("https://kapi.kakao.com")
     private String KAKAO_API_HOST;
@@ -66,15 +66,8 @@ public class KakaoService {
         return modelAndView;
     }
 
-    public String getProfile() {
-        String uri = KAKAO_API_HOST + "/v2/user/me";
-        return httpCallService.CallwithToken(Const.GET, uri, httpSession.getAttribute("token").toString());
-    }
 
-    public String getFriends() {
-        String uri = KAKAO_API_HOST + "/v1/api/talk/friends";
-        return httpCallService.CallwithToken(Const.GET, uri, httpSession.getAttribute("token").toString());
-    }
+
 
     public String message( String text ) {
         String uri = KAKAO_API_HOST + "/v2/api/talk/memo/default/send";
